@@ -1,6 +1,6 @@
 __author__ = 'v.denisov'
 
-from tests_rais.parameter_initialization import ParameterInitialization as pi
+from rais.parameter_initialization import ParameterInitialization as pi
 
 class Rais:
 

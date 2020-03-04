@@ -2,8 +2,8 @@
 __author__ = 'v.denisov'
 
 import allure
-from tests_rais.config_host import ConfigHost as config
-from tests_rais.reguest import RegustsHelper as rh
+from rais.config_host import ConfigHost as config
+from rais.reguest import RegustsHelper as rh
 
 class ClientReguest():
 

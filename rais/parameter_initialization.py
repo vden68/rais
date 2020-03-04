@@ -1,7 +1,7 @@
 __author__ = 'v.denisov'
 
 import allure
-from tests_rais.config_host import ConfigHost as config
+from rais.config_host import ConfigHost as config
 
 class ParameterInitialization:
 
