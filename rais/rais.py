@@ -15,7 +15,7 @@ class Rais:
     @classmethod
     def get_parameters(self):
         parameters = {
-            "url_host": pi.get_url_host,
-            "prefix": pi.get_prefix
+            "url_host": pi.get_url_host(),
+            "prefix": pi.get_prefix()
         }
         return parameters
