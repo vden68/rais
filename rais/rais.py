@@ -10,10 +10,12 @@ class Rais:
         self.headers = pi.get_headers()
         self.prefix = pi.get_prefix()
 
+    @classmethod
     def initialization(self, url_host, prefix):
         pi.set_url_host(url_host=url_host)
         pi.set_prefix(prefix=prefix)
 
+    @classmethod
     def get_parameters(self):
         parameters = {
             "url_host": self.url_host,
