@@ -28,7 +28,7 @@ class SessionHelper:
             "lang" : language
         }
         response_login = cr.post(url=pi.get_url_host() + '/interface/orange/user/login', params=params)
-        print('response_login=', response_login.json())
+        return response_login
 
 
 
