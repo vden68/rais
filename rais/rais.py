@@ -1,6 +1,7 @@
 __author__ = 'v.denisov'
 
 from rais.parameter_initialization import ParameterInitialization as pi
+from rais.session import SessionHelper as session
 
 class Rais:
 
@@ -19,3 +20,7 @@ class Rais:
             "prefix": pi.get_prefix()
         }
         return parameters
+
+    @classmethod
+    def login(self, username, password, profiles_cookie, language):
+        session.login(username, password, profiles_cookie, language)
