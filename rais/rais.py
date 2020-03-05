@@ -23,4 +23,4 @@ class Rais:
 
     @classmethod
     def login(self, username, password, profiles_cookie, language):
-        session.login(username, password, profiles_cookie, language)
+        session.login(username=username, password=password, profiles_cookie=profiles_cookie, language=language)
