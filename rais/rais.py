@@ -13,12 +13,12 @@ class Rais:
         """
         Инициализация параметров. обязателен перед логином
 
-        :param url_host: Пример: 'http://rais.dev.d-net.pro'
+        :param url_host:
         :type url_host: Строка
         :param prefix: Префикс при создании наименования
         :type prefix: Строка
         :param x_project_name: Обязательный параметр для headers
-        :type x_project_name: Строка, пример 'rais'
+        :type x_project_name: Строка
         """
         pi.set_url_host(url_host=url_host)
         pi.set_prefix(prefix=prefix)

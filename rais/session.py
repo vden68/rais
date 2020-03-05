@@ -12,6 +12,20 @@ class SessionHelper:
 
     @classmethod
     def login(self, username, password, profiles_cookie, language):
+        """
+        Выполняет логин к rais и сохраняет полученные cooke
+
+        :param username:
+        :type username:
+        :param password:
+        :type password:
+        :param profiles_cookie:
+        :type profiles_cookie:
+        :param language:
+        :type language:
+        :return:
+        :rtype:
+        """
         response = cr.get(url=pi.get_url_host()+'/get_rsid')
         for cookie in response.cookies:
             if cookie.name in 'rsid':
