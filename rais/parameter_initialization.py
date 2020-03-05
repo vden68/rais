@@ -47,4 +47,3 @@ class ParameterInitialization:
     @allure.step('get prefix')
     def get_prefix(self):
         return config.prefix
-
