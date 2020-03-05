@@ -2,6 +2,7 @@
 __author__ = 'v.denisov'
 
 import allure
+import time
 from rais.config_host import ConfigHost as config
 from rais.reguest import RegustsHelper as rh
 
@@ -28,16 +29,34 @@ class ClientReguest():
 
     @classmethod
     @allure.step('get')
-    def get(self, url=None, paths='', cookies=None, params=None, headers=None):
+    def get(self, url=None, paths='', cookies=None, params=None, headers=None,
+            number_of_cycles=5, no_check_response=False):
         url, cookies, headers = self.setting_parameters(url, paths, cookies, headers)
-        response = rh.get(url=url, cookies=cookies, params=params, headers=headers)
+        for nc in range(number_of_cycles):
+            response = rh.get(url=url, cookies=cookies, params=params, headers=headers)
+            if response.ok:
+                if no_check_response or response.json()['success']:
+                    break
+            time.sleep(2)
+        else:
+            print('Запрос не прошел ', url)
+            assert False
         return response
 
     @classmethod
     @allure.step('post')
-    def post(self, url=None, paths='', cookies=None, data=None, params=None, headers=None, files=None):
+    def post(self, url=None, paths='', cookies=None, data=None, params=None, headers=None, files=None,
+            number_of_cycles=5, no_check_response=False):
         url, cookies, headers = self.setting_parameters(url, paths, cookies, headers)
-        response = rh.post(url=url, cookies=cookies, data=data, params=params, headers=headers, files=files)
+        for nc in range(number_of_cycles):
+            response = rh.post(url=url, cookies=cookies, data=data, params=params, headers=headers, files=files)
+            if response.ok:
+                if no_check_response or response.json()['success']:
+                    break
+            time.sleep(2)
+        else:
+            print('Запрос не прошел ', url)
+            assert False
         return response
 
     @classmethod
