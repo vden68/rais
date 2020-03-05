@@ -22,12 +22,12 @@ class SessionHelper:
         cookies_jar.set('profile', profiles_cookie, domain=cookie_domain)
         pi.set_cookies(cookies_jar)
 
-        params = {
+        data = {
             "login": username,
             "pass" : password,
             "lang" : language
         }
-        response_login = cr.post(url=pi.get_url_host() + '/interface/orange/user/login', params=params)
+        response_login = cr.post(url=pi.get_url_host() + '/interface/orange/user/login', data=data)
         print('response_login=', response_login.json())
 
 
