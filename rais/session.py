@@ -1,7 +1,6 @@
 __author__ = 'v.denisov'
 from rais.client_reguest import ClientReguest as cr
 from rais.parameter_initialization import ParameterInitialization as pi
-#from rais.config_host import ConfigHost as config
 
 class SessionHelper:
 

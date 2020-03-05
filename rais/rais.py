@@ -10,6 +10,16 @@ class Rais:
 
     @classmethod
     def initialization(self, url_host, prefix, x_project_name):
+        """
+        Инициализация параметров. обязателен перед логином
+
+        :param url_host:
+        :type url_host: Строка
+        :param prefix: Префикс при создании наименования
+        :type prefix: Строка
+        :param x_project_name:
+        :type x_project_name:
+        """
         pi.set_url_host(url_host=url_host)
         pi.set_prefix(prefix=prefix)
         pi.set_headers(headers={'X-Project-Name': x_project_name})
