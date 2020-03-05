@@ -10,6 +10,7 @@ class SessionHelper:
     def logout(self):
         pass
 
+    @classmethod
     def login(self, username, password, profiles_cookie, language):
         response = cr.get(url=config.url_host()+'/get_rsid')
         for cookie in response.cookies:
