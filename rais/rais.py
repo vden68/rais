@@ -1,12 +1,12 @@
 __author__ = 'v.denisov'
 
 from rais.parameter_initialization import ParameterInitialization as pi
-from rais.session import SessionHelper as session
+from rais.session import SessionHelper
 
 class Rais:
 
     def __init__(self):
-        pass
+        self.session = SessionHelper(self)
 
     @classmethod
     def initialization(self, url_host, prefix, x_project_name):
