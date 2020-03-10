@@ -28,7 +28,8 @@ class Rais:
         parameters = {
             "url_host": pi.get_url_host(),
             "prefix": pi.get_prefix(),
-            "headers": pi.get_headers()
+            "headers": pi.get_headers(),
+            "cookies": pi.get_cookies()
         }
         return parameters
 
