@@ -2,6 +2,7 @@ __author__ = 'v.denisov'
 
 from rais.parameter_initialization import ParameterInitialization as pi
 from rais.session import SessionHelper as session
+from rais.create_interested_parties import CreateInterestedParties as create_ip
 
 class Rais:
     def __init__(self):
@@ -38,3 +39,18 @@ class Rais:
         response_login = session.login(username=username, password=password,
                                        profiles_cookie=profiles_cookie, language=language)
         return response_login
+
+    @classmethod
+    def create_IP_person(self, type_person):
+        """
+        Создание Заинтересованные стороны физическое лицо
+
+        :param type_person: Тип физического лица, могут быть следующие значения
+                            composer: Композитор
+                            corpse: Мертвец
+        :type type_person: Строка
+        :return: Возврощает данные о созданной заинтересованной стороне
+        :rtype:
+        """
+        person = create_ip.person(type_person=type_person)
+        return person
