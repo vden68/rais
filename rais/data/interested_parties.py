@@ -5,6 +5,7 @@ class InterestedParties:
     def __init__(self):
         pass
 
+    @classmethod
     def person(self):
         interested_parties_person = {
             "composer":{
