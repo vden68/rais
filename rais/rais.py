@@ -43,11 +43,16 @@ class Rais:
     @classmethod
     def create_IP_person(self, type_person):
         """
-        Создание Заинтересованные стороны физическое лицо
+        Создание Заинтересованной стороны.
+        Физическое лицо.
 
-        :param type_person: Тип физического лица, могут быть следующие значения
+        :param type_person: Тип физического лица.
+                            Могут быть следующие значения:
                             composer: Композитор
                             corpse: Мертвец
+                            scriptwriter: Автор текста
+                            atk: АТК
+                            foreigner: Иностранец
         :type type_person: Строка
         :return: Возврощает данные о созданной заинтересованной стороне
         :rtype:
