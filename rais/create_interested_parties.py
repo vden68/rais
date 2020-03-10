@@ -60,6 +60,7 @@ class CreateInterestedParties:
                 "object_info": ip_person["object_info"]
             }
             cr.post(url=pi.get_url_host() + '/api/red/contragent/add', params=params)
+            print('Создали заинтересованную сторону ' + pi.get_prefix()+ip_person["name_first"])
             c_a = self.check_availability(name_ip=name_ip)
             response = self.get_contragent_id(c_a)
         return response.json()["data"]["item"]
