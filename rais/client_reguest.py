@@ -34,7 +34,6 @@ class ClientReguest():
         url, cookies, headers = self.setting_parameters(url, paths, cookies, headers)
         for nc in range(number_of_cycles):
             response = rh.get(url=url, cookies=cookies, params=params, headers=headers)
-            print(response.text)
             if response.ok:
                 if no_check_response or response.json()['success']:
                     break
