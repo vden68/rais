@@ -21,7 +21,6 @@ class CreateInterestedParties:
         }
         response = cr.get(url=pi.get_url_host() + '/api/red/contragent/list', params=params)
         r_json = response.json()
-        print('r_json=', r_json)
         if len(r_json["data"]["list"])>0:
             print('Заинтересованная сторона '+name_ip+' уже существует')
             return r_json["data"]["list"][0]["id"]
@@ -29,17 +28,22 @@ class CreateInterestedParties:
             return False
 
     @classmethod
+    def get_contragent_id(cls, c_a):
+        params = {
+            "id": c_a,
+            "with": """addresses,aliases,aliases_type,contacts,staffs,bankaccounts,bankaccounts_info,
+                  contacts_type,addresses_type,requisites,type,flags,flags_type,codes,requisites_files"""
+        }
+        response = cr.get(url=pi.get_url_host() + '/api/red/contragent/get', params=params)
+        return response
+
+    @classmethod
     def person(self, type_person):
         ip_person = ip.person()[type_person]
         name_ip = pi.get_prefix()+ip_person["name_first"]
         c_a = self.check_availability(name_ip=name_ip)
         if c_a :
-            params = {
-                "id": c_a,
-                "with": """addresses,aliases,aliases_type,contacts,staffs,bankaccounts,bankaccounts_info,
-                  contacts_type,addresses_type,requisites,type,flags,flags_type,codes,requisites_files"""
-            }
-            response = cr.get(url=pi.get_url_host() + '/api/red/contragent/gett', params=params)
+            response = self.get_contragent_id(c_a)
         else:
             params = {
                 "type": ip_person["type"],
@@ -55,5 +59,8 @@ class CreateInterestedParties:
                 "note": ip_person["note"],
                 "object_info": ip_person["object_info"]
             }
-            response = cr.post(url=pi.get_url_host() + '/api/red/contragent/add', params=params)
-        return response
+            cr.post(url=pi.get_url_host() + '/api/red/contragent/add', params=params)
+            c_a = self.check_availability(name_ip=name_ip)
+            response = self.get_contragent_id(c_a)
+        return response.json()["data"]["item"]
+
