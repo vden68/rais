@@ -26,7 +26,8 @@ class RegustsHelper:
             print('Oops. HTTP Error occured')
             print('Response is: {content}'.format(content=err.response.content))
         else:
-            print('Success!')
+            pass
+            #print('Success!')
         return response
 
     @allure.step('Execute "POST" request ')
@@ -46,7 +47,8 @@ class RegustsHelper:
             print('Oops. HTTP Error occured')
             print('Response is: {content}'.format(content=err.response.content))
         else:
-            print('Success!')
+            pass
+            #print('Success!')
         return response
 
     @allure.step('Execute "DELETE" request ')
