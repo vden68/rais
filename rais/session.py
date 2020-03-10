@@ -1,12 +1,11 @@
 __author__ = 'v.denisov'
 from rais.client_reguest import ClientReguest as cr
 from rais.parameter_initialization import ParameterInitialization as pi
-from rais.rais import Rais as rais
 
 class SessionHelper:
 
-    def __init__(self, rais):
-        self.rais = rais
+    def __init__(self):
+        pass
 
     def logout(self):
         pass
