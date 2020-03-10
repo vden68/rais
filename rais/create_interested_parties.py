@@ -1,6 +1,8 @@
 __author__ = 'v.denisov'
+
 from rais.data.interested_parties import InterestedParties as ip
 from rais.parameter_initialization import ParameterInitialization as pi
+from rais.client_reguest import ClientReguest as cr
 
 class CreateInterestedParties:
 
@@ -16,19 +18,40 @@ class CreateInterestedParties:
             "search_blike": name_ip,
             "no_count": 1
         }
-        response = self.app.regusts.get(url=self.app.base_url + 'api/red/contragent/list', params=params)
+        response = cr.get(url=pi.get_url_host() + 'api/red/contragent/list', params=params)
         r_json = response.json()
         print('r_json=', r_json)
         if len(r_json["data"]["list"])>0:
             print('Заинтересованная сторона '+name_ip+' уже существует')
-            return True
+            return r_json["data"]["list"][0]["id"]
         else:
             return False
 
     @classmethod
     def person(self, type_person):
-        ip_person = ip[type_person]
-        # if ip_person[name_first]:
-        #     pass
-        print(ip_person)
-        return ip_person
+        ip_person = ip.person()[type_person]
+        c_a = self.check_availability(name_ip=pi.get_prefix+ip_person["name_first"])
+        if c_a :
+            params = {
+                "id": c_a,
+                "with": """addresses,aliases,aliases_type,contacts,staffs,bankaccounts,bankaccounts_info,
+                  contacts_type,addresses_type,requisites,type,flags,flags_type,codes,requisites_files"""
+            }
+            response = cr.get(url=pi.get_url_host() + '/api/red/contragent/gett', params=params)
+        else:
+            params = {
+                "type": ip_person["type"],
+                "name_first": pi.get_prefix+ip_person["name_first"],
+                "name_last": pi.get_prefix+ip_person["name_last"],
+                "name_middle": pi.get_prefix+ip_person["name_middle"],
+                "ip_name_number": ip_person["ip_name_number"],
+                "gender": ip_person["gender"],
+                "date_start": ip_person["date_start"],
+                "date_end": ip_person["date_end"],
+                "date_not_protected": ip_person["date_not_protected"],
+                "nationality": ip_person["nationality"],
+                "note": ip_person["note"],
+                "object_info": ip_person["object_info"]
+            }
+            response = self.app.regusts.post(url=self.app.base_url + 'api/red/contragent/add', params=params)
+        return response
