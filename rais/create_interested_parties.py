@@ -38,6 +38,24 @@ class CreateInterestedParties:
         return response
 
     @classmethod
+    def document_kind_id(self, kind_name):
+        kind_id = None
+        params = {
+            "category.is_contragent_docs": "true",
+            "is_creatable": 1,
+            "limit": 500,
+            "with": "ckrt"
+        }
+        response = cr.get(url=pi.get_url_host() + '/api/red/thesaurus/contract/kind/list', params=params)
+        r_json = response.json()
+        for g_n in r_json["data"]["list"]:
+            if (kind_name in g_n["name"]) and (len(kind_name) == len(g_n["name"])):
+                print('g_n["name"]=', g_n["name"])
+                kind_id = g_n["id"]
+                break
+        return kind_id
+
+    @classmethod
     def person(self, type_person, prefix='_'):
         if type_person in ip.person():
             ip_person = ip.person()[type_person]
@@ -47,7 +65,7 @@ class CreateInterestedParties:
         name_ip = pi.get_prefix()+prefix+ip_person["name_first"]
         c_a = self.check_availability(name_ip=name_ip)
         if c_a :
-            response = self.get_contragent_id(c_a)
+            response_person = self.get_contragent_id(c_a)
         else:
             params = {
                 "type": ip_person["type"],
@@ -66,6 +84,24 @@ class CreateInterestedParties:
             cr.post(url=pi.get_url_host() + '/api/red/contragent/add', params=params)
             print('Создали заинтересованную сторону ' + pi.get_prefix()+prefix+ip_person["name_first"])
             c_a = self.check_availability(name_ip=name_ip)
-            response = self.get_contragent_id(c_a)
-        return response.json()["data"]["item"]
+            response_person = self.get_contragent_id(c_a)
+        for l_o_r in ip_person["documents"]:
+            contragent_id = response_person.json()["data"]["item"]["id"]
+            kind_id = self.document_kind_id(l_o_r.kind_name)
+            rights = ip.rights_json()
+            params = {
+                "contract_num": pi.get_prefix()+prefix+l_o_r.contract_num,
+                "kind_id": kind_id,
+                "contragent_id": contragent_id,
+                "org_id": 1,
+                "rao_departament": "f5d7fb63-7675-4f8f-a5c5-0776c83b96ce",
+                "date_begin": l_o_r.date_begin,
+                "date_end": l_o_r.date_end,
+                "contract_date": l_o_r.contract_date,
+                "rights": rights,
+                "comment": l_o_r.comment
+            }
+            response = cr.post(url=pi.get_url_host() + '/api/red/contract/add', data=params)
+            print('status_code=', response.status_code)
+        return response_person.json()["data"]["item"]
 

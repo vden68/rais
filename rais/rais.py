@@ -57,7 +57,7 @@ class Rais:
                             not_transferring_rights: Не передавший права РАО
         :type type_person: Строка
         :param prefix: Префикс
-        :return: Возврощает данные о созданной заинтересованной стороне
+        :return: Возвращает данные о созданной заинтересованной стороне
         :rtype:
         """
         person = create_ip.person(type_person=type_person, prefix=prefix)
