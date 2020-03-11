@@ -4,6 +4,17 @@ from rais.data.interested_parties import InterestedParties as ip
 from rais.parameter_initialization import ParameterInitialization as pi
 from rais.client_reguest import ClientReguest as cr
 
+#,
+                    # {
+                    #     "contract_num": "Изъявший_Уведомление",
+                    #     "kind_name": "Уведомление об изъятии",
+                    #     "contract_date": "01.01.2016",
+                    #     "date_begin": "01.01.2016",
+                    #     "date_end": "",
+                    #     "comment": "_",
+                    #     "add_op": "ALL"
+                    # }
+
 class CreateInterestedParties:
 
     def __init__(self):

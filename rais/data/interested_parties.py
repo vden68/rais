@@ -148,16 +148,7 @@ class InterestedParties:
                         "date_end": "",
                         "comment": "_",
                         "add_op": "ALL"
-                     }#,
-                    # {
-                    #     "contract_num": "Изъявший_Уведомление",
-                    #     "kind_name": "Уведомление об изъятии",
-                    #     "contract_date": "01.01.2016",
-                    #     "date_begin": "01.01.2016",
-                    #     "date_end": "",
-                    #     "comment": "_",
-                    #     "add_op": "ALL"
-                    # }
+                     }
                 ]
             },
             "not_transferring_rights": {
