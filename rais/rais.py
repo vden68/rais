@@ -41,7 +41,7 @@ class Rais:
         return response_login
 
     @classmethod
-    def create_IP_person(self, type_person):
+    def create_IP_person(self, type_person, prefix='_'):
         """
         Создание Заинтересованной стороны.
         Физическое лицо.
@@ -53,9 +53,12 @@ class Rais:
                             scriptwriter: Автор текста
                             atk: АТК
                             foreigner: Иностранец
+                            removed_rights: Изъявший -Есть уведомление об изъятии прав
+                            not_transferring_rights: Не передавший права РАО
         :type type_person: Строка
+        :param prefix: Префикс
         :return: Возврощает данные о созданной заинтересованной стороне
         :rtype:
         """
-        person = create_ip.person(type_person=type_person)
+        person = create_ip.person(type_person=type_person, prefix=prefix)
         return person

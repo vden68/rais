@@ -38,7 +38,7 @@ class CreateInterestedParties:
         return response
 
     @classmethod
-    def person(self, type_person):
+    def person(self, type_person, prefix='_'):
         ip_person = ip.person()[type_person]
         name_ip = pi.get_prefix()+ip_person["name_first"]
         c_a = self.check_availability(name_ip=name_ip)
@@ -47,9 +47,9 @@ class CreateInterestedParties:
         else:
             params = {
                 "type": ip_person["type"],
-                "name_first": pi.get_prefix()+ip_person["name_first"],
-                "name_last": pi.get_prefix()+ip_person["name_last"],
-                "name_middle": pi.get_prefix()+ip_person["name_middle"],
+                "name_first": pi.get_prefix()+prefix+ip_person["name_first"],
+                "name_last": pi.get_prefix()+prefix+ip_person["name_last"],
+                "name_middle": pi.get_prefix()+prefix+ip_person["name_middle"],
                 "ip_name_number": ip_person["ip_name_number"],
                 "gender": ip_person["gender"],
                 "date_start": ip_person["date_start"],
