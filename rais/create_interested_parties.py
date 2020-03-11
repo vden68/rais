@@ -30,6 +30,24 @@ class CreateInterestedParties:
             return False
 
     @classmethod
+    def check_availability_contract(self, name_contract):
+        params = {
+            "with": "contragent,type,usagetype_group",
+            "limit": 25,
+            "page": 1,
+            "search_like": name_contract,
+            "descendants": 1,
+            "kind_id_not": "5a69d5bf-0000-0000-0000-000070eeb9fa"
+        }
+        response = cr.get(url=pi.get_url_host() + '/api/red/contract/list', params=params)
+        r_json = response.json()
+        if len(r_json["data"]["list"]) > 0:
+            print('Документ ' + name_contract + ' уже существует')
+            return True
+        else:
+            return False
+
+    @classmethod
     def get_contragent_id(cls, c_a):
         params = {
             "id": c_a,
@@ -88,6 +106,9 @@ class CreateInterestedParties:
             c_a = self.check_availability(name_ip=name_ip)
             response_person = self.get_contragent_id(c_a)
         for l_o_r in ip_person["documents"]:
+            if self.check_availability_contract(name_contract=pi.get_prefix()+prefix+l_o_r["contract_num"]):
+                print('name_contract=', pi.get_prefix()+prefix+l_o_r["contract_num"])
+                continue
             contragent_id = response_person.json()["data"]["item"]["id"]
             kind_id = self.document_kind_id(l_o_r["kind_name"])
             rights = ip.rights_json()
