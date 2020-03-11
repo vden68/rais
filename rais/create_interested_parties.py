@@ -124,6 +124,6 @@ class CreateInterestedParties:
                 "comment": l_o_r["comment"]
             }
             response = cr.post(url=pi.get_url_host() + '/api/red/contract/add', data=params)
-            print('Создали документ ' + pi.get_prefix()+prefix+l_o_r["contract_num"]+response.ok)
+            print('Создали документ ' + pi.get_prefix()+prefix+l_o_r["contract_num"], response.ok)
         return response_person.json()["data"]["item"]
 
