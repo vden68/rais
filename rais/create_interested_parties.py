@@ -70,7 +70,6 @@ class CreateInterestedParties:
         r_json = response.json()
         for g_n in r_json["data"]["list"]:
             if (kind_name in g_n["name"]) and (len(kind_name) == len(g_n["name"])):
-                print('g_n["name"]=', g_n["name"])
                 kind_id = g_n["id"]
                 break
         return kind_id
@@ -125,6 +124,6 @@ class CreateInterestedParties:
                 "comment": l_o_r["comment"]
             }
             response = cr.post(url=pi.get_url_host() + '/api/red/contract/add', data=params)
-            print('status_code=', response.status_code)
+            print('Создали документ ' + pi.get_prefix()+prefix+l_o_r["contract_num"]+response.ok)
         return response_person.json()["data"]["item"]
 
