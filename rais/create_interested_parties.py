@@ -87,19 +87,19 @@ class CreateInterestedParties:
             response_person = self.get_contragent_id(c_a)
         for l_o_r in ip_person["documents"]:
             contragent_id = response_person.json()["data"]["item"]["id"]
-            kind_id = self.document_kind_id(l_o_r.kind_name)
+            kind_id = self.document_kind_id(l_o_r["kind_name"])
             rights = ip.rights_json()
             params = {
-                "contract_num": pi.get_prefix()+prefix+l_o_r.contract_num,
+                "contract_num": pi.get_prefix()+prefix+l_o_r["contract_num"],
                 "kind_id": kind_id,
                 "contragent_id": contragent_id,
                 "org_id": 1,
                 "rao_departament": "f5d7fb63-7675-4f8f-a5c5-0776c83b96ce",
-                "date_begin": l_o_r.date_begin,
-                "date_end": l_o_r.date_end,
-                "contract_date": l_o_r.contract_date,
+                "date_begin": l_o_r["date_begin"],
+                "date_end": l_o_r["date_end"],
+                "contract_date": l_o_r["contract_date"],
                 "rights": rights,
-                "comment": l_o_r.comment
+                "comment": l_o_r["comment"]
             }
             response = cr.post(url=pi.get_url_host() + '/api/red/contract/add', data=params)
             print('status_code=', response.status_code)
