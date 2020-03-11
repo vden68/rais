@@ -39,7 +39,11 @@ class CreateInterestedParties:
 
     @classmethod
     def person(self, type_person, prefix='_'):
-        ip_person = ip.person()[type_person]
+        if type_person in ip.person():
+            ip_person = ip.person()[type_person]
+        else:
+            print("Нет такого типа Заинтересованной стороны >>"+type_person)
+            assert False
         name_ip = pi.get_prefix()+prefix+ip_person["name_first"]
         c_a = self.check_availability(name_ip=name_ip)
         if c_a :
