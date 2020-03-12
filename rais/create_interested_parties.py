@@ -178,5 +178,18 @@ class CreateInterestedParties:
             }
             response = cr.post(url=pi.get_url_host() + '/api/red/contract/add', data=params)
             print('Общество ' +l_o_r["society_name"], response.ok)
-        return response_person.json()["data"]["item"]
+
+            return_response = {
+                "id": response_person.json()["data"]["item"]["id"],
+                "sys_id": response_person.json()["data"]["item"]["sys_id"],
+                "type_code": response_person.json()["data"]["item"]["sys_id"],
+                "type_text": response_person.json()["data"]["item"]["type_text"],
+                "name": response_person.json()["data"]["item"]["name"],
+                "name_first": response_person.json()["data"]["item"]["name_first"],
+                "name_last": response_person.json()["data"]["item"]["name_last"],
+                "name_middle": response_person.json()["data"]["item"]["name_last"],
+                "aliases_id": response_person.json()["data"]["item"]["aliases"][0]["id"],
+                "aliases_name": response_person.json()["data"]["item"]["aliases"][0]["name"]
+            }
+        return return_response
 

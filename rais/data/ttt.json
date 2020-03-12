@@ -1,0 +1,421 @@
+{
+  "type_name": "МФ",
+  "title": "Не_подлежит_распределению_МФ",
+  "genre_name": "Антракт",
+  "object_info_name": "",
+  "note": "Должна быть отметака на вкладке прочее Произведение не подлежит распределению ",
+  "contragents": [
+    {
+      "contragent": {
+        "nationality": "",
+        "type_text": "Физическое лицо",
+        "is_deleted": 0,
+        "_trigger_off": "",
+        "rao_name_number": "",
+        "name_last": "test_vd1_Композитор",
+        "date_end": "",
+        "type_code": "ФЛ",
+        "ipchain_id": "",
+        "contacts": [],
+        "status": 1,
+        "is_rais_sro": 0,
+        "name": "test_vd1_Композитор test_vd1_Композитор test_vd1_",
+        "ts_created": "2020-03-12T14:37:20+0300",
+        "is_publisher": 0,
+        "translation": {
+          "status_text": "backend.thesaurus.commonType.contragent_status_types.1.name",
+          "type_text": "backend.thesaurus.commonType.contragent_types.3.name",
+          "type": {
+            "name": "backend.thesaurus.commonType.contragent_types.3.name",
+            "code": "backend.thesaurus.commonType.contragent_types.3.code"
+          },
+          "type_code": "backend.thesaurus.commonType.contragent_types.3.code",
+          "status": {
+            "name": "backend.thesaurus.commonType.contragent_status_types.1.name",
+            "code": "backend.thesaurus.commonType.contragent_status_types.1.code"
+          }
+        },
+        "bankaccounts": [],
+        "name_first": "test_vd1_Композитор",
+        "axapta_export_time_rao": "",
+        "is_theatre": 0,
+        "okup_type_id": 0,
+        "staffs": [],
+        "date_start": "",
+        "gender": "2",
+        "status_text": "Введен",
+        "note": "",
+        "ip_name_number": "",
+        "search_aliases": "test_vd1_Композитор t. t. test_vd1_Композитор t. test_vd1_Композитор test_vd1_Композитор test_vd1_Kompozitor test_vd1_Kompozitor test_vd1_ test_vd1_ test_vd1_Композитор test_vd1_Композитор test_vd1_Композитор test_vd1_Композитор test_vd1_",
+        "is_rais": 1,
+        "crm_id": "",
+        "axapta_json": {},
+        "object_info": "",
+        "type": 3,
+        "ts_updated": "2020-03-12T14:37:20+0300",
+        "is_actuality": 1,
+        "sys_id": "000375676",
+        "flags": [],
+        "requisites": [],
+        "aliases": [
+          {
+            "contragent_id": "5e6a1ef0-0000-0000-0000-0000736896d5",
+            "migration_tag": "",
+            "is_deleted": 0,
+            "type_text": "Официальное",
+            "aux_name": "",
+            "date_begin": "",
+            "name": "test_vd1_Композитор test_vd1_Композитор test_vd1_",
+            "_trigger_off": "",
+            "rao_name_number": "",
+            "type": "1",
+            "translation": {
+              "type": {
+                "code": "backend.thesaurus.commonType.contragent_alias_types.1.code",
+                "name": "backend.thesaurus.commonType.contragent_alias_types.1.name"
+              },
+              "type_text": "backend.thesaurus.commonType.contragent_alias_types.1.name",
+              "type_code": "backend.thesaurus.commonType.contragent_alias_types.1.code"
+            },
+            "parent_id": "",
+            "is_default": 1,
+            "is_actuality": 1,
+            "id": "5e6a1ef0-0000-0000-0000-000037c50665",
+            "date_end": "",
+            "type_code": "Официальное"
+          },
+          {
+            "date_begin": "",
+            "short_name_number": 2,
+            "_trigger_off": "",
+            "name": "test_vd1_Композитор t. t.",
+            "type_text": "Краткое наименование заинтересованной стороны. Применяется для хранения наименований заинтересованной стороны в виде аббревиатур.",
+            "contragent_id": "5e6a1ef0-0000-0000-0000-0000736896d5",
+            "migration_tag": "",
+            "is_deleted": 0,
+            "aux_name": "",
+            "official_alias_id": "5e6a1ef0-0000-0000-0000-000037c50665",
+            "is_default": 0,
+            "type_code": "Краткое",
+            "date_end": "",
+            "id": "5e6a1ef0-0000-0000-0000-000089428d78",
+            "is_actuality": 1,
+            "translation": {
+              "type_code": "backend.thesaurus.commonType.contragent_alias_types.80.code",
+              "type_text": "backend.thesaurus.commonType.contragent_alias_types.80.name",
+              "type": {
+                "code": "backend.thesaurus.commonType.contragent_alias_types.80.code",
+                "name": "backend.thesaurus.commonType.contragent_alias_types.80.name"
+              }
+            },
+            "type": "80",
+            "rao_name_number": "",
+            "parent_id": ""
+          },
+          {
+            "official_alias_id": "5e6a1ef0-0000-0000-0000-000037c50665",
+            "is_default": 0,
+            "id": "5e6a1ef0-0000-0000-0000-00008c86b5bc",
+            "is_actuality": 1,
+            "type_code": "Краткое",
+            "date_end": "",
+            "type": "80",
+            "rao_name_number": "",
+            "translation": {
+              "type_text": "backend.thesaurus.commonType.contragent_alias_types.80.name",
+              "type": {
+                "code": "backend.thesaurus.commonType.contragent_alias_types.80.code",
+                "name": "backend.thesaurus.commonType.contragent_alias_types.80.name"
+              },
+              "type_code": "backend.thesaurus.commonType.contragent_alias_types.80.code"
+            },
+            "parent_id": "",
+            "date_begin": "",
+            "short_name_number": 0,
+            "_trigger_off": "",
+            "name": "test_vd1_Композитор test_vd1_Композитор",
+            "is_deleted": 0,
+            "contragent_id": "5e6a1ef0-0000-0000-0000-0000736896d5",
+            "migration_tag": "",
+            "type_text": "Краткое наименование заинтересованной стороны. Применяется для хранения наименований заинтересованной стороны в виде аббревиатур.",
+            "aux_name": ""
+          },
+          {
+            "parent_id": "",
+            "type": "80",
+            "rao_name_number": "",
+            "translation": {
+              "type_code": "backend.thesaurus.commonType.contragent_alias_types.80.code",
+              "type_text": "backend.thesaurus.commonType.contragent_alias_types.80.name",
+              "type": {
+                "name": "backend.thesaurus.commonType.contragent_alias_types.80.name",
+                "code": "backend.thesaurus.commonType.contragent_alias_types.80.code"
+              }
+            },
+            "is_actuality": 1,
+            "id": "5e6a1ef0-0000-0000-0000-000098359841",
+            "date_end": "",
+            "type_code": "Краткое",
+            "is_default": 0,
+            "official_alias_id": "5e6a1ef0-0000-0000-0000-000037c50665",
+            "aux_name": "",
+            "migration_tag": "",
+            "contragent_id": "5e6a1ef0-0000-0000-0000-0000736896d5",
+            "is_deleted": 0,
+            "type_text": "Краткое наименование заинтересованной стороны. Применяется для хранения наименований заинтересованной стороны в виде аббревиатур.",
+            "_trigger_off": "",
+            "name": "test_vd1_Композитор t.",
+            "short_name_number": 1,
+            "date_begin": ""
+          },
+          {
+            "date_begin": "",
+            "_trigger_off": "",
+            "name": "test_vd1_Kompozitor test_vd1_Kompozitor test_vd1_",
+            "contragent_id": "5e6a1ef0-0000-0000-0000-0000736896d5",
+            "is_deleted": 0,
+            "migration_tag": "",
+            "type_text": "Транслитерированное официальное имя физического лица или транслитерированное юридическое наименование юридического лица",
+            "aux_name": "",
+            "is_default": 0,
+            "official_alias_id": "5e6a1ef0-0000-0000-0000-000037c50665",
+            "is_actuality": 1,
+            "id": "5e6a1ef0-0000-0000-0000-00009da40b16",
+            "date_end": "",
+            "type_code": "Транслитерация",
+            "type": "10",
+            "rao_name_number": "",
+            "translation": {
+              "type_text": "backend.thesaurus.commonType.contragent_alias_types.10.name",
+              "type": {
+                "code": "backend.thesaurus.commonType.contragent_alias_types.10.code",
+                "name": "backend.thesaurus.commonType.contragent_alias_types.10.name"
+              },
+              "type_code": "backend.thesaurus.commonType.contragent_alias_types.10.code"
+            },
+            "parent_id": ""
+          }
+        ],
+        "org_id": "1",
+        "name_middle": "test_vd1_",
+        "migration_tag": "",
+        "axapta_export_time_vois": "",
+        "ext_id": "",
+        "is_subpublisher": 0,
+        "codes": [],
+        "roles": [],
+        "date_not_protected": "",
+        "id": "5e6a1ef0-0000-0000-0000-0000736896d5",
+        "addresses": []
+      },
+      "role_name": "Композитор",
+      "fraction": 0.5
+    },
+    {
+      "contragent": {
+        "codes": [],
+        "addresses": [],
+        "date_not_protected": "",
+        "id": "5e6a1ef5-0000-0000-0000-000093596f8e",
+        "roles": [],
+        "migration_tag": "",
+        "name_middle": "test_vd1_n1_",
+        "flags": [],
+        "requisites": [],
+        "aliases": [
+          {
+            "date_begin": "",
+            "name": "test_vd1_n1_Композитор test_vd1_n1_Композитор test_vd1_n1_",
+            "_trigger_off": "",
+            "type_text": "Официальное",
+            "migration_tag": "",
+            "contragent_id": "5e6a1ef5-0000-0000-0000-000093596f8e",
+            "is_deleted": 0,
+            "aux_name": "",
+            "is_default": 1,
+            "type_code": "Официальное",
+            "date_end": "",
+            "id": "5e6a1ef5-0000-0000-0000-00003523233a",
+            "is_actuality": 1,
+            "translation": {
+              "type_text": "backend.thesaurus.commonType.contragent_alias_types.1.name",
+              "type": {
+                "code": "backend.thesaurus.commonType.contragent_alias_types.1.code",
+                "name": "backend.thesaurus.commonType.contragent_alias_types.1.name"
+              },
+              "type_code": "backend.thesaurus.commonType.contragent_alias_types.1.code"
+            },
+            "type": "1",
+            "rao_name_number": "",
+            "parent_id": ""
+          },
+          {
+            "parent_id": "",
+            "type": "80",
+            "rao_name_number": "",
+            "translation": {
+              "type_code": "backend.thesaurus.commonType.contragent_alias_types.80.code",
+              "type": {
+                "code": "backend.thesaurus.commonType.contragent_alias_types.80.code",
+                "name": "backend.thesaurus.commonType.contragent_alias_types.80.name"
+              },
+              "type_text": "backend.thesaurus.commonType.contragent_alias_types.80.name"
+            },
+            "is_actuality": 1,
+            "id": "5e6a1ef5-0000-0000-0000-00007458d16e",
+            "date_end": "",
+            "type_code": "Краткое",
+            "is_default": 0,
+            "official_alias_id": "5e6a1ef5-0000-0000-0000-00003523233a",
+            "aux_name": "",
+            "is_deleted": 0,
+            "migration_tag": "",
+            "contragent_id": "5e6a1ef5-0000-0000-0000-000093596f8e",
+            "type_text": "Краткое наименование заинтересованной стороны. Применяется для хранения наименований заинтересованной стороны в виде аббревиатур.",
+            "_trigger_off": "",
+            "name": "test_vd1_n1_Композитор t. t.",
+            "short_name_number": 2,
+            "date_begin": ""
+          },
+          {
+            "date_begin": "",
+            "short_name_number": 1,
+            "name": "test_vd1_n1_Композитор t.",
+            "_trigger_off": "",
+            "type_text": "Краткое наименование заинтересованной стороны. Применяется для хранения наименований заинтересованной стороны в виде аббревиатур.",
+            "migration_tag": "",
+            "is_deleted": 0,
+            "contragent_id": "5e6a1ef5-0000-0000-0000-000093596f8e",
+            "aux_name": "",
+            "is_default": 0,
+            "official_alias_id": "5e6a1ef5-0000-0000-0000-00003523233a",
+            "type_code": "Краткое",
+            "date_end": "",
+            "id": "5e6a1ef5-0000-0000-0000-000081be8c95",
+            "is_actuality": 1,
+            "translation": {
+              "type": {
+                "code": "backend.thesaurus.commonType.contragent_alias_types.80.code",
+                "name": "backend.thesaurus.commonType.contragent_alias_types.80.name"
+              },
+              "type_text": "backend.thesaurus.commonType.contragent_alias_types.80.name",
+              "type_code": "backend.thesaurus.commonType.contragent_alias_types.80.code"
+            },
+            "rao_name_number": "",
+            "type": "80",
+            "parent_id": ""
+          },
+          {
+            "type_text": "Транслитерированное официальное имя физического лица или транслитерированное юридическое наименование юридического лица",
+            "contragent_id": "5e6a1ef5-0000-0000-0000-000093596f8e",
+            "is_deleted": 0,
+            "migration_tag": "",
+            "aux_name": "",
+            "date_begin": "",
+            "_trigger_off": "",
+            "name": "test_vd1_n1_Kompozitor test_vd1_n1_Kompozitor test_vd1_n1_",
+            "translation": {
+              "type_code": "backend.thesaurus.commonType.contragent_alias_types.10.code",
+              "type": {
+                "name": "backend.thesaurus.commonType.contragent_alias_types.10.name",
+                "code": "backend.thesaurus.commonType.contragent_alias_types.10.code"
+              },
+              "type_text": "backend.thesaurus.commonType.contragent_alias_types.10.name"
+            },
+            "type": "10",
+            "rao_name_number": "",
+            "parent_id": "",
+            "official_alias_id": "5e6a1ef5-0000-0000-0000-00003523233a",
+            "is_default": 0,
+            "date_end": "",
+            "type_code": "Транслитерация",
+            "is_actuality": 1,
+            "id": "5e6a1ef5-0000-0000-0000-00009ad18b74"
+          },
+          {
+            "date_begin": "",
+            "_trigger_off": "",
+            "name": "test_vd1_n1_Композитор test_vd1_n1_Композитор",
+            "short_name_number": 0,
+            "type_text": "Краткое наименование заинтересованной стороны. Применяется для хранения наименований заинтересованной стороны в виде аббревиатур.",
+            "is_deleted": 0,
+            "contragent_id": "5e6a1ef5-0000-0000-0000-000093596f8e",
+            "migration_tag": "",
+            "aux_name": "",
+            "official_alias_id": "5e6a1ef5-0000-0000-0000-00003523233a",
+            "is_default": 0,
+            "date_end": "",
+            "type_code": "Краткое",
+            "is_actuality": 1,
+            "id": "5e6a1ef5-0000-0000-0000-0000a7d56998",
+            "translation": {
+              "type_code": "backend.thesaurus.commonType.contragent_alias_types.80.code",
+              "type": {
+                "name": "backend.thesaurus.commonType.contragent_alias_types.80.name",
+                "code": "backend.thesaurus.commonType.contragent_alias_types.80.code"
+              },
+              "type_text": "backend.thesaurus.commonType.contragent_alias_types.80.name"
+            },
+            "type": "80",
+            "rao_name_number": "",
+            "parent_id": ""
+          }
+        ],
+        "sys_id": "000375677",
+        "org_id": "1",
+        "ext_id": "",
+        "is_subpublisher": 0,
+        "axapta_export_time_vois": "",
+        "object_info": "",
+        "ts_updated": "2020-03-12T14:37:25+0300",
+        "type": 3,
+        "axapta_json": {},
+        "is_actuality": 1,
+        "search_aliases": "test_vd1_n1_Композитор t. t. test_vd1_n1_Композитор t. test_vd1_n1_Композитор test_vd1_n1_Композитор test_vd1_n1_Kompozitor test_vd1_n1_Kompozitor test_vd1_n1_ test_vd1_n1_ test_vd1_n1_Композитор test_vd1_n1_Композитор test_vd1_n1_Композитор test_vd1_n1_Композитор test_vd1_n1_",
+        "ip_name_number": "",
+        "crm_id": "",
+        "is_rais": 1,
+        "translation": {
+          "type": {
+            "code": "backend.thesaurus.commonType.contragent_types.3.code",
+            "name": "backend.thesaurus.commonType.contragent_types.3.name"
+          },
+          "status_text": "backend.thesaurus.commonType.contragent_status_types.1.name",
+          "type_text": "backend.thesaurus.commonType.contragent_types.3.name",
+          "status": {
+            "name": "backend.thesaurus.commonType.contragent_status_types.1.name",
+            "code": "backend.thesaurus.commonType.contragent_status_types.1.code"
+          },
+          "type_code": "backend.thesaurus.commonType.contragent_types.3.code"
+        },
+        "name_first": "test_vd1_n1_Композитор",
+        "bankaccounts": [],
+        "ts_created": "2020-03-12T14:37:25+0300",
+        "is_publisher": 0,
+        "status_text": "Введен",
+        "note": "",
+        "okup_type_id": 0,
+        "staffs": [],
+        "is_theatre": 0,
+        "axapta_export_time_rao": "",
+        "date_start": "",
+        "gender": "2",
+        "ipchain_id": "",
+        "is_rais_sro": 0,
+        "status": 1,
+        "contacts": [],
+        "name": "test_vd1_n1_Композитор test_vd1_n1_Композитор test_vd1_n1_",
+        "name_last": "test_vd1_n1_Композитор",
+        "rao_name_number": "",
+        "type_code": "ФЛ",
+        "date_end": "",
+        "type_text": "Физическое лицо",
+        "is_deleted": 0,
+        "nationality": "",
+        "_trigger_off": ""
+      },
+      "role_name": "Композитор",
+      "fraction": 0.5
+    }
+  ]
+}
