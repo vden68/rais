@@ -101,10 +101,7 @@ class CreateInterestedParties:
         response = cr.get(url=pi.get_url_host() + '/api/red/contragent/list', params=params)
         r_json = response.json()
         for g_n in r_json["data"]["list"]:
-            print('g_n_contragent=', g_n)
-            print('g_n["name"]=', g_n["name"])
             if society_name in g_n["name"] :
-                print('g_n["name"]=', g_n["name"])
                 society_id = g_n["id"]
                 break
         return society_id
