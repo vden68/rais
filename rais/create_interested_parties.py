@@ -167,7 +167,7 @@ class CreateInterestedParties:
             rights = ip.rights_json()
             params = {
                 "contract_num": "",
-                "kind_id": kind_id,
+                "kind_id": "5beaa959-0000-0000-0000-000081caa7a6",
                 "contragent_id": contragent_id,
                 "parent_contragent_id" : parent_contragent_id,
                 "date_begin": l_o_r["date_begin"],
