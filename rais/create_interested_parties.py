@@ -176,7 +176,6 @@ class CreateInterestedParties:
                 "rights": rights,
                 "comment": l_o_r["comment"]
             }
-            print('params=', params)
             response = cr.post(url=pi.get_url_host() + '/api/red/contract/add', data=params)
             print('Общество ' +l_o_r["society_name"], response.ok)
         return response_person.json()["data"]["item"]
