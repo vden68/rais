@@ -48,6 +48,20 @@ class CreateInterestedParties:
             return False
 
     @classmethod
+    def check_availability_foreign_control(self, name_foreign, zs_id):
+        params = {
+            "with": "contragent,type,usagetype_group,spotlinks_spot,rights_territories_territory_aliases,codes",
+            "zs_id": zs_id
+        }
+        response = cr.get(url=pi.get_url_host() + '/api/red/contract/list_foreign_control', params=params)
+        for d_l in response.json()["data"]["list"]:
+            if name_foreign in d_l["parent_contragent"]["name"]:
+                print('Общество ' + name_foreign + ' уже существует')
+                return True
+        else:
+            return False
+
+    @classmethod
     def get_contragent_id(cls, c_a):
         params = {
             "id": c_a,
@@ -73,6 +87,27 @@ class CreateInterestedParties:
                 kind_id = g_n["id"]
                 break
         return kind_id
+
+    @classmethod
+    def society_id(self,  society_name):
+        society_id = None
+        params = {
+            "with": "codes",
+            "type": 4,
+            "limit": 1000,
+            "foreign": 1,
+            "search_like": society_name
+        }
+        response = cr.get(url=self.pi.get_url_host() + '/api/red/contragent/list', params=params)
+        r_json = response.json()
+        for g_n in r_json["data"]["list"]:
+            print('g_n_contragent=', g_n)
+            print('g_n["name"]=', g_n["name"])
+            if society_name in g_n["name"] :
+                print('g_n["name"]=', g_n["name"])
+                society_id = g_n["id"]
+                break
+        return society_id
 
     @classmethod
     def person(self, type_person, prefix='_'):
@@ -125,5 +160,26 @@ class CreateInterestedParties:
             }
             response = cr.post(url=pi.get_url_host() + '/api/red/contract/add', data=params)
             print('Создали документ ' + pi.get_prefix()+prefix+l_o_r["contract_num"], response.ok)
+
+        for l_o_r in ip_person["societys"]:
+            contragent_id = response_person.json()["data"]["item"]["id"]
+            if self.check_availability_foreign_control(name_foreign=l_o_r["society_name"], zs_id=contragent_id):
+                continue
+            kind_id = self.document_kind_id(l_o_r["society_name"])
+            parent_contragent_id = self.society_id(l_o_r["society_name"])
+            rights = ip.rights_json()
+            params = {
+                "contract_num": "",
+                "kind_id": kind_id,
+                "contragent_id": contragent_id,
+                "parent_contragent_id" : parent_contragent_id,
+                "date_begin": l_o_r["date_begin"],
+                "date_end": "",
+                "contract_date": l_o_r["date_begin"],
+                "rights": rights,
+                "comment": l_o_r["comment"]
+            }
+            response = cr.post(url=pi.get_url_host() + '/api/red/contract/add', data=params)
+            print('Общество ' +l_o_r["society_name"], response.ok)
         return response_person.json()["data"]["item"]
 

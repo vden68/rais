@@ -32,6 +32,9 @@ class InterestedParties:
                         "comment": "_",
                         "add_op": "ALL"
                     }
+                ],
+                "societys": [
+
                 ]
             },
             "corpse": {
@@ -57,6 +60,9 @@ class InterestedParties:
                         "comment": "_",
                         "add_op": "ALL"
                     }
+                ],
+                "societys": [
+
                 ]
             },
             "scriptwriter": {
@@ -82,6 +88,9 @@ class InterestedParties:
                         "comment": "_",
                         "add_op": "ALL"
                     }
+                ],
+                "societys": [
+
                 ]
             },
             "atk": {
@@ -107,6 +116,9 @@ class InterestedParties:
                         "comment": "_",
                         "add_op": "ALL"
                     }
+                ],
+                "societys": [
+
                 ]
             },
             "foreigner": {
@@ -124,6 +136,14 @@ class InterestedParties:
                 "object_info": "",
                 "documents":[
 
+                ],
+                "societys": [
+                    {
+                        "society_name": "3TDJ_Общество",
+                        "date_begin": "01.01.2000",
+                        "date_end": "",
+                        "comment": "Тестовое общество. Внимание. Договор а с РАО нет, платежей нет"
+                    }
                 ]
             },
             "removed_rights": {
@@ -158,6 +178,9 @@ class InterestedParties:
                         "comment": "_",
                         "add_op": "ALL"
                     }
+                ],
+                "societys": [
+
                 ]
             },
             "not_transferring_rights": {
@@ -174,6 +197,9 @@ class InterestedParties:
                 "note": "Нет договора с рао",
                 "object_info": "",
                 "documents": [
+
+                ],
+                "societys": [
 
                 ]
             }
