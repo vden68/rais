@@ -191,6 +191,5 @@ class CreateInterestedParties:
             "aliases_id": response_person.json()["data"]["item"]["aliases"][0]["id"],
             "aliases_name": response_person.json()["data"]["item"]["aliases"][0]["name"]
         }
-        print("return_response=", return_response)
         return return_response
 
