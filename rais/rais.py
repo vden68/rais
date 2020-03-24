@@ -3,6 +3,7 @@ __author__ = 'v.denisov'
 from rais.parameter_initialization import ParameterInitialization as pi
 from rais.session import SessionHelper as session
 from rais.create_interested_parties import CreateInterestedParties as create_ip
+from rais.create_op import CreateOP as create_op
 
 class Rais:
     def __init__(self):
@@ -62,3 +63,8 @@ class Rais:
         """
         person = create_ip.person(type_person=type_person, prefix=prefix)
         return person
+
+    @classmethod
+    def create_work(self, data_work):
+        work = create_op.create_work(data_work=data_work)
+        return work
